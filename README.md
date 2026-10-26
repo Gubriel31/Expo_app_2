@@ -1,4 +1,4 @@
-#Readme file for running the app. It is also possible to watch a demo video of how to run the app. Click here to watch the demo video: https://www.youtube.com/shorts/UDDxSxXyFsU
+#Readme file for running the app. It is also possible to watch a demo video of how to run the app. Click here to watch the demo video: https://www.youtube.com/shorts/9GREaGi9Sp0
 
 #1
 First install node.js and npm. Afterwards, install npm:
