@@ -1,8 +1,32 @@
-import { View, Text, SectionList } from 'react-native';
+import { View, Text, SectionList, Pressable, Alert } from 'react-native';
 import GlobalStyle from '../styles/GlobalStyle';
 import { CITIES } from "../data/const";
 
+import { rtdb } from "../database/firebase";
+import { ref, push } from "firebase/database";
+
 const BookScreen = () => {
+
+  // Gem den valgte by i Firebase
+  const bookCity = async (city) => {
+    try {
+      const bookingData = {
+        title: city,
+        date: "Not specified",
+      };
+
+      await push(ref(rtdb, "Bookings"), bookingData);
+
+      Alert.alert(
+        "Booking saved!",
+        `${city} has been added to My Bookings. You can view your bookings in the My Bookings section and add a date if you wish.`,
+      );
+
+    } catch (error) {
+      Alert.alert("Error", error.message);
+    }
+  };
+
   return (
     <View style={GlobalStyle.container}>
 
@@ -30,11 +54,14 @@ const BookScreen = () => {
         )}
 
         renderItem={({ item }) => (
-          <View style={GlobalStyle.listItem}>
+          <Pressable
+            style={GlobalStyle.listItem}
+            onPress={() => bookCity(item)}
+          >
             <Text style={GlobalStyle.text}>
               {item}
             </Text>
-          </View>
+          </Pressable>
         )}
 
       />

@@ -1,3 +1,4 @@
+
 import { StyleSheet } from 'react-native';
 
 const GlobalStyle = StyleSheet.create({
@@ -31,7 +32,7 @@ const GlobalStyle = StyleSheet.create({
     lineHeight: 24,
   },
 
-  // Et "kort"
+  // Et kort
   card: {
     backgroundColor: '#FFFFFF',
     padding: 18,
@@ -57,7 +58,7 @@ const GlobalStyle = StyleSheet.create({
     marginBottom: 6,
   },
 
-  // Din egen knap
+  // Knapper
   button: {
     backgroundColor: '#2563EB',
     paddingVertical: 14,
@@ -84,7 +85,7 @@ const GlobalStyle = StyleSheet.create({
     marginBottom: 12,
   },
 
-  // Brugbar til fx FlatList-elementer
+  // Listeelementer
   listItem: {
     backgroundColor: '#FFFFFF',
     padding: 16,
@@ -92,6 +93,60 @@ const GlobalStyle = StyleSheet.create({
     marginBottom: 10,
     borderWidth: 1,
     borderColor: '#E5E7EB',
+  },
+
+  // MyBookingsScreen
+
+  heading: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+
+  addButton: {
+    backgroundColor: '#2563EB',
+    padding: 15,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+
+  bookingCard: {
+    backgroundColor: '#FFFFFF',
+    padding: 15,
+    borderRadius: 12,
+    marginBottom: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  bookingInfo: {
+    flex: 1,
+  },
+
+  bookingTitle: {
+    fontSize: 17,
+    fontWeight: 'bold',
+  },
+
+  bookingDate: {
+    color: '#666',
+    marginTop: 5,
+  },
+
+  edit: {
+    color: '#2563EB',
+    marginRight: 15,
+  },
+
+  delete: {
+    color: '#DC2626',
+  },
+
+  empty: {
+    textAlign: 'center',
+    color: '#888',
+    marginTop: 30,
   },
 
 });

@@ -13,7 +13,11 @@ const SettingsScreen = ({ navigation }) => {
         Manage your preferences
       </Text>
 
-      <View style={GlobalStyle.card}>
+      {/* NOTIFICATIONS */}
+      <Pressable
+        style={GlobalStyle.card}
+        onPress={() => navigation.navigate('Notifications')}
+      >
         <Text style={GlobalStyle.cardTitle}>
           Notifications
         </Text>
@@ -21,9 +25,13 @@ const SettingsScreen = ({ navigation }) => {
         <Text style={GlobalStyle.text}>
           Manage your notification settings.
         </Text>
-      </View>
+      </Pressable>
 
-      <View style={GlobalStyle.card}>
+      {/* ACCOUNT */}
+      <Pressable
+        style={GlobalStyle.card}
+        onPress={() => navigation.navigate('Account')}
+      >
         <Text style={GlobalStyle.cardTitle}>
           Account
         </Text>
@@ -31,8 +39,9 @@ const SettingsScreen = ({ navigation }) => {
         <Text style={GlobalStyle.text}>
           Manage your account settings.
         </Text>
-      </View>
+      </Pressable>
 
+      {/* BACK TO HOME */}
       <Pressable
         style={GlobalStyle.button}
         onPress={() => navigation.navigate('Home')}
